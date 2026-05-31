@@ -787,6 +787,17 @@
     height: 64px;
   }
   .catmark svg { width: 100%; height: 100%; }
+  /* two cats (our pair) facing each other in the footer */
+  .catmark.cat-pair {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+  }
+  .catmark.cat-pair svg { width: 78px; height: 58px; }
+  .catmark.cat-pair .cat-b { width: 62px; height: 46px; transform: scaleX(-1); }
 
   /* ---------- Scroll reveal ---------- */
   .reveal {
@@ -1476,8 +1487,9 @@
     <p class="footer-names script">Míša &amp; Honza</p>
     <p class="footer-date">sobota 26. září 2026 &nbsp;·&nbsp; V&nbsp;Mejtě, Praha 10 – Nedvězí</p>
 
-    <span class="catmark botanical" aria-hidden="true">
-      <svg viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
+    <span class="catmark botanical cat-pair" aria-hidden="true">
+      <svg class="cat-a" viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
+      <svg class="cat-b" viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
     </span>
 
     <p class="footer-url">misa-honza.github.io</p>
