@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Míša &amp; Honza — 26. září 2026</title>
+<meta name="description" content="Svatba Míši Hrdinové a Honzy Janouška — sobota 26. září 2026, V Mejtě, Praha 10 – Nedvězí. Program dne, místo a doprava, ubytování i potvrzení účasti.">
+<meta name="theme-color" content="#eef3e8">
+
+<!-- Open Graph (nicer link sharing of misa-honza.github.io) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Míša &amp; Honza — 26. září 2026">
+<meta property="og:description" content="S láskou v srdci oznamujeme, že si řekneme ano v kruhu rodiny a přátel.">
+<meta property="og:url" content="https://misa-honza.github.io">
+<meta property="og:locale" content="cs_CZ">
+
+<!-- Eucalyptus-leaf favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23eef3e8'/%3E%3Cpath d='M16 5 C 9 9 6 18 9 27 C 18 24 23 16 22 6 C 20 9 18 9 16 5 Z' fill='%235f7247'/%3E%3Cpath d='M16 6 C 16 13 14 21 10 26' stroke='%2346562f' stroke-width='1' fill='none'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Allura&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink:    #3a3027;   /* warm dark brown text */
+    --accent: #5f7247;   /* warm olive/moss green */
+    --accent2:#46562f;   /* deep warm olive green */
+    --bloom:  #c98a8a;   /* dusty rose */
+    --bloom2: #b9707a;   /* deeper rose */
+    --gold:   #d8b878;   /* soft gold centre */
+    --gold-line:#c4a24e; /* the hairline gold used in the card frame */
+    --rule:   #b9a98f;   /* hairline */
+    --paper:  #eef3e8;   /* soft green-tinted off-white */
+    --page-bg:#e8e4dc;   /* outer page background */
+    --muted:  #6b5f50;   /* secondary text */
+    --soft-shadow: 0 6px 30px rgba(58,48,39,0.12);
+    --card-shadow: 0 4px 22px rgba(58,48,39,0.10);
+    --nav-h: 62px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 8px);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.6;
+    background:
+      radial-gradient(140% 60% at 50% -10%, rgba(201,138,138,0.06) 0%, rgba(201,138,138,0) 55%),
+      radial-gradient(140% 60% at 50% 110%, rgba(138,154,107,0.07) 0%, rgba(138,154,107,0) 55%),
+      var(--page-bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* hard guard: no decorative element may force horizontal scroll */
+  img, svg, iframe { max-width: 100%; }
+
+  h1, h2, h3 {
+    font-family: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  p { margin: 0 0 1em; }
+
+  a { color: var(--accent2); }
+
+  .script {
+    font-family: "Allura", "Cormorant Garamond", cursive;
+    font-weight: 400;
+    line-height: 0.95;
+  }
+
+  /* the invitation's hue tweak so SVG greenery matches the printed card */
+  .botanical { filter: hue-rotate(8deg) saturate(1.05) brightness(0.85); }
+
+  /* ---------- Layout shell ---------- */
+  .wrap {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  main { display: block; }
+
+  /* Each section reads like an elegant stacked card on the paper. */
+  .section {
+    padding: clamp(48px, 8vw, 92px) 0;
+  }
+
+  .panel {
+    position: relative;
+    background: var(--paper);
+    border-radius: 4px;
+    box-shadow: var(--card-shadow);
+    padding: clamp(28px, 5vw, 56px);
+    overflow: hidden;
+  }
+
+  /* The hairline gold frame motif echoing the card's .frame */
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid var(--gold-line);
+    border-radius: 2px;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  .panel > * { position: relative; z-index: 1; }
+
+  .section-head {
+    text-align: center;
+    margin-bottom: clamp(24px, 4vw, 40px);
+  }
+  .section-head .eyebrow {
+    display: block;
+    font-style: italic;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .section-head h2 {
+    font-size: clamp(1.9rem, 5vw, 2.8rem);
+  }
+
+  /* small decorative divider used under section titles */
+  .divmark {
+    width: 150px;
+    max-width: 60%;
+    height: 26px;
+    margin: 14px auto 0;
+    display: block;
+  }
+  .divmark svg { width: 100%; height: 100%; overflow: visible; }
+
+  /* ---------- Sticky nav ---------- */
+  .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(238,243,232,0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(185,169,143,0.4);
+    min-height: var(--nav-h);
+  }
+  .topnav .nav-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: var(--nav-h);
+  }
+  .nav-brand {
+    font-family: "Allura", "Cormorant Garamond", cursive;
+    font-size: 1.7rem;
+    color: var(--accent2);
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1;
+    padding: 4px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-brand svg { width: 26px; height: 20px; flex: none; }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .nav-links a {
+    display: inline-block;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--accent2); background: rgba(95,114,71,0.08); }
+
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    color: var(--ink);
+    font-family: "EB Garamond", serif;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-toggle .bars { display: inline-block; width: 18px; height: 2px; background: var(--accent2); position: relative; }
+  .nav-toggle .bars::before,
+  .nav-toggle .bars::after { content: ""; position: absolute; left: 0; width: 18px; height: 2px; background: var(--accent2); }
+  .nav-toggle .bars::before { top: -6px; }
+  .nav-toggle .bars::after { top: 6px; }
+
+  @media (max-width: 820px) {
+    .nav-toggle { display: inline-flex; }
+    .nav-links {
+      position: absolute;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--paper);
+      border-bottom: 1px solid rgba(185,169,143,0.5);
+      box-shadow: var(--soft-shadow);
+      max-height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      transition: max-height 0.32s ease, visibility 0.32s ease;
+    }
+    .nav-links.open { max-height: 80vh; visibility: visible; }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+      display: block;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(185,169,143,0.25);
+      text-align: center;
+      font-size: 1.15rem;
+    }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    padding: clamp(40px, 7vw, 80px) 0 clamp(48px, 8vw, 96px);
+    overflow: hidden;
+  }
+  .hero-card {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    background:
+      radial-gradient(120% 60% at 50% -8%, rgba(201,138,138,0.07) 0%, rgba(201,138,138,0) 52%),
+      radial-gradient(120% 60% at 50% 108%, rgba(138,154,107,0.08) 0%, rgba(138,154,107,0) 52%),
+      var(--paper);
+    box-shadow: var(--soft-shadow);
+    border-radius: 4px;
+    padding: clamp(120px, 22vw, 170px) clamp(20px, 6vw, 64px) clamp(96px, 16vw, 140px);
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-card .frame {
+    position: absolute;
+    inset: 14px;
+    border: 1px solid var(--gold-line);
+    border-radius: 2px;
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  /* Top eucalyptus garland over the hero, exactly like the card */
+  .hero-garland {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 230px;
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* mirrored sibling so greenery anchors BOTH top corners symmetrically */
+  .hero-garland.mirror { transform: scaleX(-1); }
+
+  /* bottom-of-hero mirrored garland (borrowed from draft-b) framing the card
+     top-and-bottom and inviting the eye downward */
+  .hero-garland.bottom {
+    top: auto;
+    bottom: 0;
+    transform: scaleY(-1);
+    max-height: 170px;
+    opacity: 0.92;
+  }
+  .hero-garland.bottom.mirror { transform: scale(-1, -1); }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero .eyebrow {
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: clamp(1rem, 2.6vw, 1.25rem);
+    line-height: 1.5;
+    color: var(--accent2);
+    max-width: 30em;
+    margin: 0 auto clamp(20px, 4vw, 30px);
+  }
+
+  .hero-names {
+    margin: 0 auto;
+  }
+  .hero-names .first {
+    font-family: "Allura", "Cormorant Garamond", cursive;
+    font-size: clamp(3.6rem, 16vw, 7rem);
+    line-height: 0.9;
+    color: var(--ink);
+    display: block;
+  }
+  .hero-names .amp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: clamp(2px, 1vw, 8px) 0;
+  }
+  .hero-names .ampchar {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.3rem, 4vw, 2rem);
+    color: var(--accent2);
+  }
+  .ampleaf { width: clamp(40px, 9vw, 64px); height: clamp(20px, 4.5vw, 32px); flex: none; }
+  .ampleaf.rt { transform: scaleX(-1); }
+
+  .hero-surnames {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-top: clamp(14px, 3vw, 22px);
+  }
+
+  .hero-meta {
+    margin-top: clamp(24px, 5vw, 38px);
+    font-size: clamp(1.05rem, 3vw, 1.3rem);
+    line-height: 1.6;
+  }
+  .hero-meta .day {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    letter-spacing: 0.03em;
+  }
+  .hero-meta .time { font-style: italic; color: var(--muted); }
+  .hero-meta .venue {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+    margin-top: 10px;
+  }
+  .hero-meta .addr { font-style: italic; color: var(--muted); font-size: 1rem; }
+
+  /* scroll-cue chevron (borrowed from draft-b) */
+  .scroll-cue {
+    position: absolute;
+    left: 50%;
+    bottom: clamp(10px, 3vw, 26px);
+    transform: translateX(-50%);
+    z-index: 2;
+    color: var(--accent);
+    opacity: 0.75;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .scroll-cue svg { width: 26px; height: 26px; animation: bob 2.2s ease-in-out infinite; }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+
+  /* ---------- Countdown ---------- */
+  .countdown {
+    margin-top: clamp(28px, 5vw, 40px);
+  }
+  .countdown .cd-label {
+    display: block;
+    font-style: italic;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+  }
+  .cd-grid {
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 2.5vw, 20px);
+    flex-wrap: wrap;
+  }
+  /* frosted backdrop-blur cells (borrowed from draft-b) */
+  .cd-cell {
+    min-width: clamp(58px, 17vw, 86px);
+    padding: 12px 6px;
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(196,162,78,0.55);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(58,48,39,0.07);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+  .cd-num {
+    display: block;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    line-height: 1;
+    color: var(--accent2);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .cd-unit {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .cd-done {
+    font-style: italic;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    color: var(--bloom2);
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  /* ---------- Intro ---------- */
+  .intro-text {
+    text-align: center;
+    max-width: 36em;
+    margin: 0 auto;
+    font-size: clamp(1.05rem, 2.6vw, 1.2rem);
+  }
+  .intro-lead {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent2);
+    font-size: clamp(1.2rem, 3.4vw, 1.55rem);
+    line-height: 1.5;
+    margin-bottom: 1.1em;
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+  .intro-sign {
+    font-family: "Allura", "Cormorant Garamond", cursive;
+    font-size: clamp(2.2rem, 7vw, 3rem);
+    color: var(--accent2);
+    line-height: 1;
+    margin: 0.3em 0 0;
+  }
+  /* recurring cat delight inside the intro */
+  .intro-cat { margin: 22px auto 0; width: 78px; height: 58px; display: block; }
+  .intro-cat svg { width: 100%; height: 100%; }
+  .leafmark { margin: 26px auto 0; width: 46px; height: 50px; display: block; }
+  .leafmark svg { width: 100%; height: 100%; }
+
+  /* ---------- Program / timeline ---------- */
+  .timeline {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-left: 8px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(196,162,78,0.15), var(--gold-line) 12%, var(--gold-line) 88%, rgba(196,162,78,0.15));
+  }
+  .tl-item {
+    position: relative;
+    padding: 0 0 clamp(22px, 4vw, 34px) 44px;
+  }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-dot {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 4px var(--paper);
+  }
+  .tl-item.known .tl-dot { background: var(--accent); border-color: var(--accent2); }
+  .tl-time {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    color: var(--accent2);
+  }
+  .tl-item.tbd .tl-time { font-style: italic; color: var(--muted); }
+  .tl-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.25rem, 3.6vw, 1.6rem);
+    margin: 2px 0 4px;
+  }
+  .tl-desc { color: var(--muted); font-size: 1rem; margin: 0; }
+
+  /* ---------- Generic content blocks ---------- */
+  .lead-center {
+    text-align: center;
+    max-width: 34em;
+    margin: 0 auto 1.4em;
+    color: var(--muted);
+  }
+
+  .venue-block { text-align: center; }
+  .venue-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.5rem, 5vw, 2.1rem);
+  }
+  .venue-addr { font-style: italic; color: var(--muted); margin-top: 4px; }
+
+  .map-frame {
+    margin: clamp(22px, 4vw, 32px) auto 0;
+    border: 1px solid var(--gold-line);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    max-width: 760px;
+    background: #dfe6d6;
+  }
+  .map-frame iframe {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 45vw, 400px);
+    border: 0;
+  }
+
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin: clamp(22px, 4vw, 30px) 0 0;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 4px;
+    border: 1px solid var(--accent);
+    color: var(--accent2);
+    background: rgba(255,255,255,0.4);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn:hover { background: rgba(95,114,71,0.1); }
+  .btn.primary {
+    background: var(--accent);
+    color: #fbfdf7;
+    border-color: var(--accent2);
+  }
+  .btn.primary:hover { background: var(--accent2); }
+  .btn svg { width: 18px; height: 18px; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(16px, 3vw, 24px);
+    margin-top: clamp(26px, 4vw, 36px);
+  }
+  .info-card {
+    background: rgba(255,255,255,0.38);
+    border: 1px solid rgba(185,169,143,0.45);
+    border-radius: 4px;
+    padding: 22px 22px;
+    text-align: center;
+  }
+  .info-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: var(--accent2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+  }
+  .info-card h3 svg { width: 22px; height: 22px; flex: none; }
+  .info-card p { margin: 0; color: var(--muted); font-size: 1rem; }
+  .tbd-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--accent);
+    border-top: 1px dashed rgba(185,169,143,0.6);
+    padding-top: 8px;
+  }
+  /* "Brzy doplníme" pill (borrowed from draft-c .transit cards) */
+  .pill-soon {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background: rgba(95,114,71,0.1);
+    border-radius: 999px;
+    padding: 3px 11px;
+    margin-bottom: 10px;
+  }
+
+  /* ---------- RSVP ---------- */
+  .rsvp-panel { text-align: center; }
+  .rsvp-deadline {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    color: var(--accent2);
+    margin-bottom: 0.5em;
+  }
+  .rsvp-deadline strong { font-weight: 600; }
+  .rsvp-note { max-width: 32em; margin: 0 auto 1.6em; color: var(--muted); }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--ink);
+    background: rgba(255,255,255,0.42);
+    border: 1px solid rgba(196,162,78,0.5);
+    border-radius: 4px;
+    padding: 16px 18px;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    flex: 1 1 250px;
+    min-width: 0;
+    max-width: 360px;
+  }
+  .contact-card:hover { background: rgba(95,114,71,0.08); box-shadow: var(--card-shadow); }
+  .contact-card .ic {
+    flex: none;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(95,114,71,0.12);
+    color: var(--accent2);
+  }
+  .contact-card .ic svg { width: 20px; height: 20px; }
+  .contact-card .ct-label {
+    display: block;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .contact-card .ct-val {
+    display: block;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--accent2);
+  }
+  /* recurring playful cat signature inside the RSVP card (borrowed from draft-c) */
+  .catsig { display: block; margin: 26px auto 0; width: 72px; height: 54px; opacity: 0.9; }
+  .catsig svg { width: 100%; height: 100%; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
+  }
+  .faq-item {
+    background: rgba(255,255,255,0.36);
+    border: 1px solid rgba(185,169,143,0.4);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .faq-item summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 18px 22px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--accent2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary .q { display: inline-flex; align-items: center; gap: 11px; }
+  .faq-item summary .qleaf { width: 24px; height: 16px; flex: none; }
+  .faq-item summary .chev {
+    flex: none;
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: rotate(45deg);
+    transition: transform 0.25s ease;
+    margin-top: -4px;
+  }
+  .faq-item[open] summary .chev { transform: rotate(-135deg); margin-top: 4px; }
+  .faq-item .faq-body {
+    padding: 0 22px 20px;
+    color: var(--muted);
+    font-size: 1.02rem;
+  }
+  .faq-item .faq-body p:last-child { margin-bottom: 0; }
+  .faq-item .faq-body .tbd { font-style: italic; }
+  .faq-item .faq-body a { color: var(--accent2); }
+
+  /* ---------- Footer ---------- */
+  .site-footer {
+    position: relative;
+    text-align: center;
+    padding: clamp(56px, 9vw, 96px) 0 clamp(40px, 6vw, 64px);
+    margin-top: clamp(20px, 4vw, 40px);
+    background:
+      radial-gradient(120% 80% at 50% 110%, rgba(138,154,107,0.10) 0%, rgba(138,154,107,0) 60%);
+  }
+  .footer-divider {
+    width: 240px;
+    max-width: 76%;
+    height: 60px;
+    margin: 0 auto clamp(18px, 3vw, 28px);
+  }
+  .footer-divider svg { width: 100%; height: 100%; overflow: visible; }
+  .footer-lead {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: var(--accent2);
+  }
+  .footer-names {
+    font-family: "Allura", "Cormorant Garamond", cursive;
+    font-size: clamp(2.6rem, 9vw, 4rem);
+    color: var(--ink);
+    line-height: 1;
+    margin: 10px 0 14px;
+  }
+  .footer-date {
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .footer-url {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+  .catmark {
+    margin: clamp(26px, 4vw, 36px) auto 0;
+    width: 84px;
+    height: 64px;
+  }
+  .catmark svg { width: 100%; height: 100%; }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+  }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- Focus / accessibility ---------- */
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  .contact-card:focus-visible,
+  .btn:focus-visible,
+  iframe:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    background: var(--paper);
+    color: var(--accent2);
+    padding: 10px 16px;
+    border: 1px solid var(--gold-line);
+    border-radius: 4px;
+    z-index: 100;
+    transition: top 0.2s ease;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 12px; }
+
+  /* <main> receives programmatic focus from the skip link without a visible ring */
+  main:focus { outline: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .scroll-cue svg { animation: none !important; }
+    *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
+  }
+
+  /* Tiny screens: shrink the countdown so four cells still fit cleanly */
+  @media (max-width: 360px) {
+    .cd-cell { min-width: 64px; padding: 10px 4px; }
+    .cd-grid { gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#hlavni">Přeskočit na obsah</a>
+
+<!-- ============================ SHARED SVG DEFS (copied verbatim from the printed invitation) ============================ -->
+<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- soft-edge blur filters (watercolor feel): back layers softer, front crisper -->
+    <filter id="soft"  x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="soft2" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="1.1"/></filter>
+    <filter id="soft3" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="0.6"/></filter>
+    <filter id="wash"  x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
+    <!-- tonal gradients so each leaf shifts in colour like a wash -->
+    <linearGradient id="gDark"  x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#3b4d22"/><stop offset="1" stop-color="#637b4a"/></linearGradient>
+    <linearGradient id="gMid"   x1="0" y1="0" x2="0.3"  y2="1"><stop offset="0" stop-color="#6f8a4e"/><stop offset="1" stop-color="#9cb274"/></linearGradient>
+    <linearGradient id="gOlive" x1="0" y1="0" x2="0.3"  y2="1"><stop offset="0" stop-color="#7d9646"/><stop offset="1" stop-color="#b6c682"/></linearGradient>
+    <linearGradient id="gLight" x1="0" y1="0" x2="0.3"  y2="1"><stop offset="0" stop-color="#9aae57"/><stop offset="1" stop-color="#cdd68f"/></linearGradient>
+    <linearGradient id="gGrey"  x1="0" y1="0" x2="0.3"  y2="1"><stop offset="0" stop-color="#869c8f"/><stop offset="1" stop-color="#c4cfc2"/></linearGradient>
+    <radialGradient id="gBerry" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#d6dc89"/><stop offset="1" stop-color="#b0bd5e"/></radialGradient>
+    <!-- leaf shape: ovate eucalyptus leaf, rounded base at (0,0), soft point at (2,0) -->
+    <path id="leafSh" d="M0 0 C 0.2 -1 0.95 -1 2 0 C 0.95 1 0.2 1 0 0 Z"/>
+    <!-- willow sprig: stem + slender pointed leaves; leaves have no fill so they
+         inherit the colour of whatever group <use>s the sprig -->
+    <g id="wsprig">
+      <path d="M0 0 C 30 -4 70 -7 110 -7 C 130 -7 145 -6 156 -4" fill="none" stroke="#6f7e52" stroke-width="1.4" stroke-linecap="round"/>
+      <g stroke="none">
+        <g transform="translate(14,-2) rotate(-46)"><use href="#leafSh" transform="scale(13,9)"/></g>
+        <g transform="translate(40,-5) rotate(-40)"><use href="#leafSh" transform="scale(14,9.5)"/></g>
+        <g transform="translate(66,-6.5) rotate(-36)"><use href="#leafSh" transform="scale(13,9)"/></g>
+        <g transform="translate(92,-7) rotate(-31)"><use href="#leafSh" transform="scale(12,8.4)"/></g>
+        <g transform="translate(116,-7) rotate(-26)"><use href="#leafSh" transform="scale(10.5,7.4)"/></g>
+        <g transform="translate(138,-6) rotate(-20)"><use href="#leafSh" transform="scale(9,6.4)"/></g>
+        <g transform="translate(156,-4) rotate(-4)"><use href="#leafSh" transform="scale(7.5,5.4)"/></g>
+        <g transform="translate(27,-3.5) rotate(46)"><use href="#leafSh" transform="scale(13,9)"/></g>
+        <g transform="translate(53,-6) rotate(40)"><use href="#leafSh" transform="scale(14,9.5)"/></g>
+        <g transform="translate(79,-7) rotate(36)"><use href="#leafSh" transform="scale(13,9)"/></g>
+        <g transform="translate(105,-7) rotate(31)"><use href="#leafSh" transform="scale(11.5,8)"/></g>
+        <g transform="translate(128,-6.5) rotate(26)"><use href="#leafSh" transform="scale(10,7)"/></g>
+      </g>
+    </g>
+    <!-- second willow variant: curvier stem, irregular leaves -->
+    <g id="wsprig2">
+      <path d="M0 0 C 24 -8 56 -10 86 -6 C 104 -3 118 -5 130 -9" fill="none" stroke="#6f7e52" stroke-width="1.3" stroke-linecap="round"/>
+      <g stroke="none">
+        <g transform="translate(12,-4) rotate(-52)"><use href="#leafSh" transform="scale(12,8.4)"/></g>
+        <g transform="translate(38,-9) rotate(-36)"><use href="#leafSh" transform="scale(14,9.5)"/></g>
+        <g transform="translate(70,-8) rotate(-28)"><use href="#leafSh" transform="scale(11.5,8)"/></g>
+        <g transform="translate(100,-6) rotate(-40)"><use href="#leafSh" transform="scale(13,9)"/></g>
+        <g transform="translate(124,-8) rotate(-14)"><use href="#leafSh" transform="scale(9.5,6.8)"/></g>
+        <g transform="translate(24,-7) rotate(50)"><use href="#leafSh" transform="scale(13.5,9.2)"/></g>
+        <g transform="translate(52,-10) rotate(33)"><use href="#leafSh" transform="scale(14,9.5)"/></g>
+        <g transform="translate(84,-6) rotate(52)"><use href="#leafSh" transform="scale(12,8.4)"/></g>
+        <g transform="translate(112,-5) rotate(30)"><use href="#leafSh" transform="scale(10,7)"/></g>
+      </g>
+    </g>
+    <!-- round (silver-dollar) eucalyptus sprig -->
+    <g id="rsprig">
+      <path d="M0 0 C 26 -3 60 -5 92 -5 C 108 -5 118 -4 126 -3" fill="none" stroke="#7e9070" stroke-width="1.4" stroke-linecap="round"/>
+      <g stroke="none">
+        <g transform="translate(16,-2) rotate(-58)"><ellipse cx="11" rx="11" ry="9.5"/></g>
+        <g transform="translate(16,-2) rotate(58)"><ellipse cx="11" rx="11" ry="9.5"/></g>
+        <g transform="translate(40,-4) rotate(-54)"><ellipse cx="11" rx="11" ry="9.5"/></g>
+        <g transform="translate(40,-4) rotate(54)"><ellipse cx="11" rx="11" ry="9.5"/></g>
+        <g transform="translate(64,-5) rotate(-50)"><ellipse cx="10" rx="10" ry="8.5"/></g>
+        <g transform="translate(64,-5) rotate(50)"><ellipse cx="10" rx="10" ry="8.5"/></g>
+        <g transform="translate(86,-5) rotate(-44)"><ellipse cx="9" rx="9" ry="7.6"/></g>
+        <g transform="translate(86,-5) rotate(44)"><ellipse cx="9" rx="9" ry="7.6"/></g>
+        <g transform="translate(106,-4.5) rotate(-36)"><ellipse cx="7.5" rx="7.5" ry="6.4"/></g>
+        <g transform="translate(106,-4.5) rotate(36)"><ellipse cx="7.5" rx="7.5" ry="6.4"/></g>
+        <g transform="translate(126,-3) rotate(-8)"><ellipse cx="6.5" rx="6.5" ry="5.6"/></g>
+      </g>
+    </g>
+    <g id="bigleaf" stroke="none"><use href="#leafSh" transform="scale(22,15)"/></g>
+    <g id="berry" stroke="none">
+      <circle cx="0" cy="0" r="4"/><circle cx="8" cy="3" r="3.6"/><circle cx="4" cy="9" r="3.4"/>
+      <circle cx="13" cy="9" r="3.2"/><circle cx="9" cy="15" r="3"/>
+    </g>
+    <!-- baby's breath (nevěstin závoj): airy sprig of tiny white blooms -->
+    <g id="bb">
+      <g stroke="#aab69a" stroke-width="0.8" fill="none">
+        <path d="M0 0 C 10 -1 18 -5 26 -7"/>
+        <path d="M9 -1 C 11 -6 13 -11 15 -16"/>
+        <path d="M17 -5 C 21 -8 25 -11 30 -12"/>
+        <path d="M13 -3 C 15 1 17 5 19 10"/>
+        <path d="M22 -6 C 26 -4 31 -3 35 -3"/>
+        <path d="M5 -1 C 3 -5 2 -9 3 -13"/>
+      </g>
+      <g fill="#ffffff" stroke="#aeba9e" stroke-width="0.8">
+        <circle cx="26" cy="-7" r="3"/><circle cx="15" cy="-16" r="2.8"/>
+        <circle cx="30" cy="-12" r="2.7"/><circle cx="19" cy="10" r="2.6"/>
+        <circle cx="35" cy="-3" r="2.6"/><circle cx="9" cy="-1" r="2.2"/>
+        <circle cx="21" cy="-2" r="2.2"/><circle cx="27" cy="-14" r="2"/>
+        <circle cx="33" cy="-8" r="2"/><circle cx="3" cy="-13" r="2.2"/>
+        <circle cx="6" cy="-6" r="1.8"/>
+      </g>
+    </g>
+
+    <!-- ===== Reusable composed art (DRY symbols, from draft-c) ===== -->
+
+    <!-- composed garland cluster (the invitation's top-left corner). viewBox 0 0 740 260 -->
+    <g id="garlandCluster">
+      <g filter="url(#wash)" fill="#c2d2a2" fill-opacity="0.3">
+        <ellipse cx="90" cy="70" rx="150" ry="80"/>
+        <ellipse cx="220" cy="48" rx="170" ry="70"/>
+        <ellipse cx="60" cy="120" rx="90" ry="70"/>
+      </g>
+      <g fill="#92a86a" fill-opacity="0.8" filter="url(#soft)">
+        <use href="#wsprig2" transform="translate(40,34) rotate(-52) scale(0.46)"/>
+        <use href="#wsprig2" transform="translate(108,44) rotate(-18) scale(0.54)"/>
+        <use href="#wsprig"  transform="translate(230,46) rotate(-2) scale(0.46)"/>
+      </g>
+      <g fill="url(#gDark)" fill-opacity="0.92" filter="url(#soft)">
+        <use href="#wsprig"  transform="translate(50,14) rotate(4) scale(1.35)"/>
+        <use href="#wsprig"  transform="translate(44,22) rotate(38) scale(1.1)"/>
+        <use href="#wsprig"  transform="translate(34,30) rotate(74) scale(0.95)"/>
+        <use href="#wsprig2" transform="translate(26,20) rotate(120) scale(0.88)"/>
+      </g>
+      <g fill="url(#gMid)" filter="url(#soft2)">
+        <use href="#wsprig2" transform="translate(70,18) rotate(14) scale(1.05)"/>
+        <use href="#wsprig"  transform="translate(50,28) rotate(56) scale(0.85)"/>
+        <use href="#wsprig2" transform="translate(34,28) rotate(98) scale(0.8)"/>
+      </g>
+      <g fill="url(#gLight)" filter="url(#soft2)">
+        <use href="#wsprig2" transform="translate(44,34) rotate(112) scale(0.7)"/>
+      </g>
+      <g fill="#d2d8cb" fill-opacity="0.92" filter="url(#soft2)">
+        <use href="#bigleaf" transform="translate(130,68) rotate(34) scale(0.68)"/>
+      </g>
+      <g fill="url(#gBerry)" filter="url(#soft3)">
+        <use href="#berry" transform="translate(58,84) rotate(12) scale(1.05)"/>
+        <use href="#berry" transform="translate(112,96) rotate(20) scale(0.78)"/>
+      </g>
+      <g filter="url(#soft3)">
+        <use href="#bb" transform="translate(74,42) rotate(-12) scale(1.1)"/>
+        <use href="#bb" transform="translate(156,32) rotate(8) scale(1.0)"/>
+        <use href="#bb" transform="translate(44,92) rotate(40) scale(0.9)"/>
+        <use href="#bb" transform="translate(116,58) rotate(18) scale(1.0)"/>
+        <use href="#bb" transform="translate(196,50) rotate(-4) scale(0.85)"/>
+      </g>
+      <g fill="url(#gMid)" filter="url(#soft2)">
+        <g opacity="0.68"><g transform="translate(255,72) rotate(40)"><use href="#leafSh" transform="scale(11,7)"/></g></g>
+        <g opacity="0.58"><g transform="translate(300,112) rotate(72)"><use href="#leafSh" transform="scale(10,6.4)"/></g></g>
+        <g opacity="0.5"><g transform="translate(345,56) rotate(22)"><use href="#leafSh" transform="scale(9,5.8)"/></g></g>
+        <g opacity="0.4"><g transform="translate(398,128) rotate(96)"><use href="#leafSh" transform="scale(8,5)"/></g></g>
+        <g opacity="0.3"><g transform="translate(452,82) rotate(50)"><use href="#leafSh" transform="scale(7,4.4)"/></g></g>
+        <g opacity="0.22"><g transform="translate(512,150) rotate(112)"><use href="#leafSh" transform="scale(6,3.8)"/></g></g>
+        <g opacity="0.15"><g transform="translate(566,104) rotate(34)"><use href="#leafSh" transform="scale(5.4,3.4)"/></g></g>
+        <g opacity="0.62"><g transform="translate(278,46) rotate(15)"><use href="#leafSh" transform="scale(10,6.4)"/></g></g>
+        <g opacity="0.46"><g transform="translate(330,150) rotate(120)"><use href="#leafSh" transform="scale(8.5,5.4)"/></g></g>
+        <g opacity="0.36"><g transform="translate(420,40) rotate(28)"><use href="#leafSh" transform="scale(7.5,4.8)"/></g></g>
+        <g opacity="0.26"><g transform="translate(480,120) rotate(88)"><use href="#leafSh" transform="scale(6.5,4.1)"/></g></g>
+      </g>
+    </g>
+
+    <!-- composed corner cluster (the invitation's bottom-right). viewBox 0 0 380 280 -->
+    <g id="cornerCluster">
+      <g filter="url(#wash)" fill="#c2d2a2" fill-opacity="0.3">
+        <ellipse cx="322" cy="232" rx="130" ry="96"/>
+        <ellipse cx="250" cy="250" rx="92" ry="72"/>
+      </g>
+      <g fill="url(#gDark)" fill-opacity="0.9">
+        <use href="#wsprig"  transform="translate(360,262) rotate(212) scale(1.05)"/>
+      </g>
+      <g fill="url(#gMid)">
+        <use href="#wsprig2" transform="translate(362,258) rotate(198) scale(0.9)"/>
+        <use href="#wsprig2" transform="translate(350,250) rotate(244) scale(0.82)"/>
+      </g>
+      <g fill="url(#gLight)">
+        <use href="#wsprig"  transform="translate(360,262) rotate(220) scale(0.74)"/>
+      </g>
+      <g fill="#d2d8cb" fill-opacity="0.92">
+        <use href="#bigleaf" transform="translate(312,210) rotate(224) scale(0.72)"/>
+      </g>
+      <g fill="url(#gBerry)">
+        <use href="#berry" transform="translate(344,232) rotate(205) scale(0.85)"/>
+      </g>
+      <g>
+        <use href="#bb" transform="translate(312,204) rotate(160) scale(0.9)"/>
+        <use href="#bb" transform="translate(336,228) rotate(196) scale(0.85)"/>
+        <use href="#bb" transform="translate(290,232) rotate(176) scale(0.78)"/>
+      </g>
+      <g fill="url(#gMid)">
+        <g opacity="0.6"><g transform="translate(278,188) rotate(222)"><use href="#leafSh" transform="scale(11,7)"/></g></g>
+        <g opacity="0.48"><g transform="translate(228,150) rotate(202)"><use href="#leafSh" transform="scale(9.5,6)"/></g></g>
+        <g opacity="0.37"><g transform="translate(186,198) rotate(246)"><use href="#leafSh" transform="scale(8.5,5.4)"/></g></g>
+        <g opacity="0.27"><g transform="translate(142,122) rotate(212)"><use href="#leafSh" transform="scale(7.5,4.8)"/></g></g>
+      </g>
+    </g>
+
+    <!-- horizontal spray (willow + baby's-breath) for footer / dividers. viewBox 0 0 300 80 -->
+    <g id="spray">
+      <g fill="url(#gMid)" filter="url(#soft2)">
+        <use href="#wsprig"  transform="translate(150,40) rotate(-3) scale(0.85)"/>
+        <use href="#wsprig"  transform="translate(150,40) rotate(180) scale(0.85)"/>
+        <use href="#wsprig2" transform="translate(150,40) rotate(-22) scale(0.6)"/>
+        <use href="#wsprig2" transform="translate(150,40) rotate(202) scale(0.6)"/>
+      </g>
+      <g fill="url(#gDark)" fill-opacity="0.9" filter="url(#soft3)">
+        <use href="#wsprig"  transform="translate(150,40) rotate(8) scale(0.55)"/>
+        <use href="#wsprig"  transform="translate(150,40) rotate(190) scale(0.55)"/>
+      </g>
+      <g fill="url(#gBerry)" filter="url(#soft3)">
+        <use href="#berry" transform="translate(96,46) rotate(20) scale(0.7)"/>
+        <use href="#berry" transform="translate(196,40) rotate(160) scale(0.7)"/>
+      </g>
+      <g filter="url(#soft3)">
+        <use href="#bb" transform="translate(150,24) rotate(0) scale(1.0)"/>
+        <use href="#bb" transform="translate(120,34) rotate(-12) scale(0.85)"/>
+        <use href="#bb" transform="translate(186,30) rotate(186) scale(0.85)"/>
+      </g>
+    </g>
+
+    <!-- small leaf-pair mark for dividers / bullets. viewBox 0 0 30 16 -->
+    <g id="leafmark">
+      <g fill="url(#gMid)">
+        <g transform="translate(15,8) rotate(-30)"><use href="#leafSh" transform="scale(7,4.6)"/></g>
+        <g transform="translate(15,8) rotate(30)"><use href="#leafSh" transform="scale(7,4.6)"/></g>
+        <g transform="translate(15,8) rotate(0)"><use href="#leafSh" transform="scale(8,5)"/></g>
+      </g>
+      <g fill="url(#gBerry)"><circle cx="6" cy="8" r="2.2"/></g>
+    </g>
+
+    <!-- the playful cat motif (from the invitation .catmark). viewBox 0 0 72 54 -->
+    <g id="cat" fill="#8a9775">
+      <!-- tail raised at the back (left) -->
+      <path d="M16 22 C 8 18 5 9 9 4 C 10 2 13 3 12 6 C 10 11 13 17 19 18 Z"/>
+      <!-- arched body: low at the front (right), high rump at the back (left) -->
+      <path d="M52 42 C 46 38 36 30 26 24 C 21 21 15 20 14 25 C 13 30 18 33 24 33 C 33 35 43 40 49 45 C 51 46 53 44 52 42 Z"/>
+      <!-- hind legs (raised rump, longer) -->
+      <rect x="15" y="30" width="3.6" height="22" rx="1.8"/>
+      <rect x="22" y="32" width="3.6" height="20" rx="1.8"/>
+      <!-- front legs (stretched forward, low) -->
+      <rect x="48" y="43" width="3.4" height="9" rx="1.7"/>
+      <rect x="55" y="42" width="3.4" height="10" rx="1.7"/>
+      <!-- head low at the front -->
+      <circle cx="57" cy="42" r="7"/>
+      <!-- ears -->
+      <path d="M52 37 L 50 29 L 57 35 Z"/>
+      <path d="M61 37 L 63 29 L 57 35 Z"/>
+    </g>
+
+    <!-- title divider: hairline rules flanking a leaf pair. viewBox 0 0 200 30 -->
+    <g id="titleDivider">
+      <line x1="10" y1="15" x2="78" y2="15" stroke="#c4a24e" stroke-width="1"/>
+      <line x1="122" y1="15" x2="190" y2="15" stroke="#c4a24e" stroke-width="1"/>
+      <g fill="url(#gMid)"><use href="#leafSh" transform="translate(100,15) rotate(-90) scale(7,4.4)"/></g>
+      <g fill="url(#gDark)"><use href="#leafSh" transform="translate(100,15) rotate(90) scale(7,4.4)"/></g>
+      <circle cx="100" cy="15" r="2.4" fill="#c4a24e"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- ============================ STICKY NAV ============================ -->
+<header class="topnav">
+  <nav class="nav-inner" aria-label="Hlavní navigace">
+    <a class="nav-brand" href="#hero" aria-label="Míša a Honza — nahoru">
+      <svg class="botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>
+      Míša &amp; Honza
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Otevřít menu">
+      <span class="bars" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#uvod">Úvod</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#misto">Místo</a></li>
+      <li><a href="#ubytovani">Ubytování</a></li>
+      <li><a href="#rsvp">Potvrzení</a></li>
+      <li><a href="#dotazy">Dotazy</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="hlavni" tabindex="-1">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="hero" aria-labelledby="hero-names">
+    <div class="wrap">
+      <div class="hero-card">
+        <div class="frame" aria-hidden="true"></div>
+
+        <!-- Top eucalyptus garland over the hero (left corner) — one DRY source via <use> -->
+        <svg class="hero-garland botanical" viewBox="0 0 740 260" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <use href="#garlandCluster"/>
+        </svg>
+        <!-- mirrored sibling anchoring the RIGHT top corner symmetrically -->
+        <svg class="hero-garland mirror botanical" viewBox="0 0 740 260" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <use href="#garlandCluster"/>
+        </svg>
+
+        <!-- bottom-of-hero mirrored garland (draft-b drama) framing the card top-and-bottom -->
+        <svg class="hero-garland bottom botanical" viewBox="0 0 740 260" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <use href="#garlandCluster"/>
+        </svg>
+        <svg class="hero-garland bottom mirror botanical" viewBox="0 0 740 260" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <use href="#garlandCluster"/>
+        </svg>
+
+        <div class="hero-content">
+          <p class="eyebrow">Chceme se spolu smát, podporovat se a&nbsp;držet se za&nbsp;ruce celý život.</p>
+
+          <h1 class="hero-names" id="hero-names">
+            <span class="first script">Míša</span>
+            <span class="amp" aria-hidden="true">
+              <svg class="ampleaf botanical" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                <g fill="url(#gMid)"><use href="#wsprig" transform="translate(2,15) rotate(-4) scale(0.34)"/></g>
+              </svg>
+              <span class="ampchar">&amp;</span>
+              <svg class="ampleaf rt botanical" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                <g fill="url(#gMid)"><use href="#wsprig" transform="translate(2,15) rotate(-4) scale(0.34)"/></g>
+              </svg>
+            </span>
+            <span class="first script">Honza</span>
+          </h1>
+          <p class="hero-surnames">Hrdinová &amp; Janoušek</p>
+
+          <div class="hero-meta">
+            <div class="day">sobota 26. září 2026</div>
+            <div class="time">obřad ve 14:30 hodin</div>
+            <div class="venue">V&nbsp;Mejtě</div>
+            <div class="addr">Hájová 78, Praha 10 – Nedvězí</div>
+          </div>
+
+          <div class="countdown">
+            <span class="cd-label">Do našeho velkého dne zbývá</span>
+            <div class="cd-grid" id="countdown" role="timer" aria-label="Odpočet do svatby">
+              <div class="cd-cell"><span class="cd-num" id="cd-days">—</span><span class="cd-unit">dní</span></div>
+              <div class="cd-cell"><span class="cd-num" id="cd-hours">—</span><span class="cd-unit">hodin</span></div>
+              <div class="cd-cell"><span class="cd-num" id="cd-mins">—</span><span class="cd-unit">minut</span></div>
+              <div class="cd-cell"><span class="cd-num" id="cd-secs">—</span><span class="cd-unit">vteřin</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- animated scroll cue (draft-b); aria-hidden chevron, decorative -->
+    <a class="scroll-cue" href="#uvod" aria-label="Posunout na úvod">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- ============================ ÚVOD ============================ -->
+  <section class="section" id="uvod" aria-labelledby="uvod-title">
+    <div class="wrap">
+      <div class="panel reveal">
+        <div class="section-head">
+          <span class="eyebrow">Vítejte u&nbsp;nás</span>
+          <h2 id="uvod-title">Bereme se!</h2>
+          <span class="divmark" aria-hidden="true">
+            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><use href="#titleDivider"/></svg>
+          </span>
+        </div>
+        <div class="intro-text">
+          <p class="intro-lead">S&nbsp;láskou v&nbsp;srdci oznamujeme, že si řekneme ano v&nbsp;kruhu rodiny a&nbsp;přátel.</p>
+          <p>Milí naši, je to tady — po letech společného smíchu, malých dobrodružství a&nbsp;jednoho velmi rozhodného kocoura, který nám doma šéfuje, jsme se rozhodli udělat to oficiální.</p>
+          <p>Moc bychom si přáli, abyste u&nbsp;toho byli s&nbsp;námi. Připravujeme den plný objetí, dobrého jídla a&nbsp;tance až do&nbsp;večera — a&nbsp;hlavně lidí, které máme rádi. Na&nbsp;těchto stránkách najdete vše praktické: program, cestu, ubytování i&nbsp;to, jak nám dát vědět, že dorazíte.</p>
+          <p class="intro-sign">Míša &amp;&nbsp;Honza</p>
+        </div>
+        <span class="intro-cat botanical" aria-hidden="true">
+          <svg viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ PROGRAM DNE ============================ -->
+  <section class="section" id="program" aria-labelledby="program-title">
+    <div class="wrap">
+      <div class="panel reveal">
+        <div class="section-head">
+          <span class="eyebrow">Jak bude vypadat den</span>
+          <h2 id="program-title">Program dne</h2>
+          <span class="divmark" aria-hidden="true">
+            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><use href="#titleDivider"/></svg>
+          </span>
+        </div>
+
+        <ol class="timeline" style="list-style:none;margin:0;padding-left:8px;">
+          <li class="tl-item tbd">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-time">čas upřesníme</div>
+            <h3 class="tl-title">Příjezd hostů</h3>
+            <p class="tl-desc">Sejdeme se v&nbsp;klidu před obřadem, bude čas se přivítat a&nbsp;usadit.</p>
+          </li>
+          <li class="tl-item known">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-time">14:30</div>
+            <h3 class="tl-title">Obřad</h3>
+            <p class="tl-desc">Slavnostní okamžik, kdy si řekneme své ano, v&nbsp;kruhu rodiny a&nbsp;přátel.</p>
+          </li>
+          <li class="tl-item tbd">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-time">čas upřesníme</div>
+            <h3 class="tl-title">Gratulace a&nbsp;focení</h3>
+            <p class="tl-desc">Společné fotografie a&nbsp;přípitek na&nbsp;zdraví novomanželů.</p>
+          </li>
+          <li class="tl-item tbd">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-time">čas upřesníme</div>
+            <h3 class="tl-title">Svatební raut</h3>
+            <p class="tl-desc">Dobré jídlo, pití a&nbsp;společné posezení na&nbsp;témže místě.</p>
+          </li>
+          <li class="tl-item tbd">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-time">čas upřesníme</div>
+            <h3 class="tl-title">Večerní oslava</h3>
+            <p class="tl-desc">Hudba, tanec a&nbsp;chvíle, na&nbsp;které budeme dlouho vzpomínat.</p>
+          </li>
+        </ol>
+        <p class="lead-center" style="margin-top:30px;margin-bottom:0;">Přesné časy jednotlivých částí dne ještě upřesníme – budeme je tu mít včas, abyste věděli, kdy přijet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ MÍSTO &amp; DOPRAVA ============================ -->
+  <section class="section" id="misto" aria-labelledby="misto-title">
+    <div class="wrap">
+      <div class="panel reveal">
+        <div class="section-head">
+          <span class="eyebrow">Kde se sejdeme</span>
+          <h2 id="misto-title">Místo &amp; doprava</h2>
+          <span class="divmark" aria-hidden="true">
+            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><use href="#titleDivider"/></svg>
+          </span>
+        </div>
+
+        <div class="venue-block">
+          <div class="venue-name">V&nbsp;Mejtě</div>
+          <p class="venue-addr">Hájová 78, Praha 10 – Nedvězí<br>klidná část na&nbsp;východním okraji Prahy</p>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            title="Mapa – V Mejtě, Hájová 78, Praha 10 – Nedvězí"
+            src="https://www.google.com/maps?q=Hájová%2078%20Praha%2010%20Nedvězí&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=Hájová%2078%20Praha%2010%20Nedvězí" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+            Navigovat (Google Maps)
+          </a>
+          <a class="btn" href="https://mapy.cz/zakladni?q=Hájová%2078%20Praha%2010%20Nedvězí" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m4 7 5-2 6 2 5-2v12l-5 2-6-2-5 2V7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 5v12M15 7v12" stroke="currentColor" stroke-width="1.6"/></svg>
+            Otevřít v&nbsp;Mapy.cz
+          </a>
+        </div>
+
+        <!-- dedicated Parking + MHD transit cards (from draft-c) -->
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>
+              <svg class="botanical" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11v6h-2v2h-1v-2H8v2H7v-2H5v-6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="15" r="1" fill="currentColor"/><circle cx="16" cy="15" r="1" fill="currentColor"/></svg>
+              Parkování
+            </h3>
+            <p class="pill-soon">Brzy doplníme</p>
+            <p>Informace o&nbsp;parkování v&nbsp;okolí pro vás chystáme — dáme vědět, kde nejlépe zaparkovat. Místa bude dost.</p>
+          </div>
+          <div class="info-card">
+            <h3>
+              <svg class="botanical" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="4" width="14" height="13" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 11h14" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="14" r="1" fill="currentColor"/><circle cx="15.5" cy="14" r="1" fill="currentColor"/><path d="M8 17l-2 3M16 17l2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              MHD a&nbsp;příjezd
+            </h3>
+            <p class="pill-soon">Brzy doplníme</p>
+            <p>Spojení městskou hromadnou dopravou i&nbsp;tip na&nbsp;nejbližší zastávku připravujeme. Nedvězí je dostupné i&nbsp;bez auta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ UBYTOVÁNÍ ============================ -->
+  <section class="section" id="ubytovani" aria-labelledby="ubytovani-title">
+    <div class="wrap">
+      <div class="panel reveal">
+        <div class="section-head">
+          <span class="eyebrow">Pro hosty zdaleka</span>
+          <h2 id="ubytovani-title">Ubytování</h2>
+          <span class="divmark" aria-hidden="true">
+            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><use href="#titleDivider"/></svg>
+          </span>
+        </div>
+
+        <p class="lead-center">Doporučení na&nbsp;ubytování v&nbsp;okolí brzy doplníme. Vybíráme pro vás příjemná místa kousek od&nbsp;Nedvězí, ať se po oslavě máte kam pohodlně uložit.</p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Ubytování v&nbsp;okolí</h3>
+            <p class="pill-soon">Brzy doplníme</p>
+            <p>Vytipováváme příjemná místa na&nbsp;přespání kousek od&nbsp;Nedvězí. Jakmile budeme mít jistotu, najdete je tady i&nbsp;s&nbsp;orientačními cenami.</p>
+          </div>
+          <div class="info-card">
+            <h3>Praha – pohodlně do&nbsp;centra</h3>
+            <p class="pill-soon">Brzy doplníme</p>
+            <p>Pro ty, kdo chtějí spojit svatbu s&nbsp;výletem do&nbsp;Prahy, přidáme tip na&nbsp;ubytování s&nbsp;dobrým spojením k&nbsp;nám.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ POTVRZENÍ ÚČASTI ============================ -->
+  <section class="section" id="rsvp" aria-labelledby="rsvp-title">
+    <div class="wrap">
+      <div class="panel reveal">
+        <div class="section-head">
+          <span class="eyebrow">Dejte nám prosím vědět</span>
+          <h2 id="rsvp-title">Potvrzení účasti</h2>
+          <span class="divmark" aria-hidden="true">
+            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><use href="#titleDivider"/></svg>
+          </span>
+        </div>
+
+        <div class="rsvp-panel">
+          <p class="rsvp-deadline">Potvrďte prosím svou účast <strong>do&nbsp;31.&nbsp;srpna 2026</strong></p>
+          <p class="rsvp-note">Žádný formulář vyplňovat nemusíte – stačí nám napsat nebo zavolat. Napište nám prosím i&nbsp;to, jestli dorazíte sami nebo s&nbsp;doprovodem, ať pro vás všechno hezky připravíme.</p>
+
+          <div class="contact-row">
+            <a class="contact-card" href="tel:+420XXXXXXXXX">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6.5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="ct-label">Telefon</span>
+                <span class="ct-val">+420 XXX XXX XXX</span>
+              </span>
+            </a>
+            <a class="contact-card" href="mailto:ahoj@misa-honza.cz">
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </span>
+              <span>
+                <span class="ct-label">E-mail</span>
+                <span class="ct-val">ahoj@misa-honza.cz</span>
+              </span>
+            </a>
+          </div>
+          <p class="lead-center" style="margin-top:26px;margin-bottom:0;font-style:italic;">Konkrétní telefon a&nbsp;e-mail sem brzy doplníme.</p>
+
+          <!-- recurring cat signature inside the RSVP card (draft-c .catsig) -->
+          <span class="catsig botanical" aria-hidden="true">
+            <svg viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ ČASTÉ DOTAZY ============================ -->
+  <section class="section" id="dotazy" aria-labelledby="dotazy-title">
+    <div class="wrap">
+      <div class="panel reveal">
+        <div class="section-head">
+          <span class="eyebrow">Praktické informace</span>
+          <h2 id="dotazy-title">Časté dotazy</h2>
+          <span class="divmark" aria-hidden="true">
+            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><use href="#titleDivider"/></svg>
+          </span>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span class="q"><svg class="qleaf botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>Jaký bude dress code?</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p class="tbd">Konkrétní dress code teprve ladíme a&nbsp;brzy ho sem doplníme. Zatím počítejte se&nbsp;svatebně sváteční, ale pohodlnou náladou — část dne budeme venku na&nbsp;trávě, takže vysoké podpatky možná nechte doma.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="q"><svg class="qleaf botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>Můžeme přijít s&nbsp;dětmi?</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Děti jsou u&nbsp;nás vítané a&nbsp;rádi je uvidíme. <span class="tbd">Jestli pro ně chystáme nějaký program nebo koutek, upřesníme blíž k&nbsp;termínu</span> — kdyžtak nám dejte vědět při potvrzení účasti, ať s&nbsp;nimi počítáme.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="q"><svg class="qleaf botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>A&nbsp;co dárky?</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Největším dárkem je pro nás to, že přijdete a&nbsp;oslavíte tento den s&nbsp;námi. <span class="tbd">Pokud byste nás přesto chtěli potěšit, naše tipy sem rádi doplníme</span> — nic ale není potřeba.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="q"><svg class="qleaf botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>Co si&nbsp;vzít s&nbsp;sebou?</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Dobrou náladu především. Jelikož se část dne odehraje venku, hodí se&nbsp;pohodlné boty a&nbsp;pro jistotu lehčí vrstva na&nbsp;večer, kdy se&nbsp;v&nbsp;Nedvězí ochladí. <span class="tbd">Další praktické tipy přibudou.</span></p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span class="q"><svg class="qleaf botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>Jak vám potvrdíme účast?</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-body">
+              <p>Úplně jednoduše — zavolejte nebo napište. Vše najdete v&nbsp;sekci <a href="#rsvp">Potvrzení účasti</a>. Prosíme jen, abyste nám dali vědět nejpozději do&nbsp;31.&nbsp;srpna 2026.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer" aria-labelledby="footer-lead">
+  <div class="wrap">
+    <span class="footer-divider botanical" aria-hidden="true">
+      <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg"><use href="#spray"/></svg>
+    </span>
+
+    <p class="footer-lead" id="footer-lead">Těšíme se na&nbsp;vás</p>
+    <p class="footer-names script">Míša &amp; Honza</p>
+    <p class="footer-date">sobota 26. září 2026 &nbsp;·&nbsp; V&nbsp;Mejtě, Praha 10 – Nedvězí</p>
+
+    <span class="catmark botanical" aria-hidden="true">
+      <svg viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
+    </span>
+
+    <p class="footer-url">misa-honza.github.io</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Mobile nav toggle ---------- */
+  var toggle = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Zavřít menu" : "Otevřít menu");
+    });
+    // close the menu after tapping a link (mobile)
+    links.addEventListener("click", function (e) {
+      if (e.target.closest("a") && links.classList.contains("open")) {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Otevřít menu");
+      }
+    });
+  }
+
+  /* ---------- Live countdown to 2026-09-26 14:30 (local Prague time) ---------- */
+  // Prague is CEST (UTC+2) on 26 Sept 2026 -> use explicit offset so the target
+  // is correct regardless of the viewer's own timezone.
+  var target = new Date("2026-09-26T14:30:00+02:00").getTime();
+  var elDays = document.getElementById("cd-days");
+  var elHours = document.getElementById("cd-hours");
+  var elMins = document.getElementById("cd-mins");
+  var elSecs = document.getElementById("cd-secs");
+  var grid = document.getElementById("countdown");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var diff = target - Date.now();
+    if (diff <= 0) {
+      if (grid) {
+        grid.innerHTML = '<p class="cd-done">Náš velký den je tady — děkujeme, že jste s námi!</p>';
+      }
+      return false;
+    }
+    var s = Math.floor(diff / 1000);
+    var days = Math.floor(s / 86400);
+    var hours = Math.floor((s % 86400) / 3600);
+    var mins = Math.floor((s % 3600) / 60);
+    var secs = s % 60;
+    if (elDays) elDays.textContent = days;
+    if (elHours) elHours.textContent = pad(hours);
+    if (elMins) elMins.textContent = pad(mins);
+    if (elSecs) elSecs.textContent = pad(secs);
+    return true;
+  }
+
+  if (tick()) {
+    var timer = setInterval(function () {
+      if (!tick()) clearInterval(timer);
+    }, 1000);
+  }
+
+  /* ---------- Scroll reveal (respect reduced motion) ---------- */
+  var prefersReduced = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealEls = document.querySelectorAll(".reveal");
+
+  if (prefersReduced || !("IntersectionObserver" in window)) {
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
