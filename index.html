@@ -802,8 +802,8 @@
     justify-content: center;
     gap: 4px;
   }
-  .catmark.cat-pair svg { width: 78px; height: 58px; }
-  .catmark.cat-pair .cat-b { width: 62px; height: 46px; transform: scaleX(-1); }
+  .catmark.cat-pair svg { width: 56px; height: 66px; }
+  .catmark.cat-pair .cat-a { transform: scaleX(-1); } /* mirror left cat so tails splay outward */
 
   /* ---------- Scroll reveal ---------- */
   .reveal {
@@ -869,6 +869,7 @@
     <filter id="soft"  x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="2"/></filter>
     <filter id="soft2" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="1.1"/></filter>
     <filter id="soft3" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="0.6"/></filter>
+    <filter id="soft4" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="0.4"/></filter>
     <filter id="wash"  x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter>
     <!-- tonal gradients so each leaf shifts in colour like a wash -->
     <linearGradient id="gDark"  x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#3b4d22"/><stop offset="1" stop-color="#637b4a"/></linearGradient>
@@ -1049,21 +1050,21 @@
 
     <!-- horizontal spray (willow + baby's-breath) for footer / dividers. viewBox 0 0 300 80 -->
     <g id="spray">
-      <g fill="url(#gMid)" filter="url(#soft2)">
+      <g fill="url(#gMid)" filter="url(#soft4)">
         <use href="#wsprig"  transform="translate(150,40) rotate(-3) scale(0.85)"/>
         <use href="#wsprig"  transform="translate(150,40) rotate(180) scale(0.85)"/>
         <use href="#wsprig2" transform="translate(150,40) rotate(-22) scale(0.6)"/>
         <use href="#wsprig2" transform="translate(150,40) rotate(202) scale(0.6)"/>
       </g>
-      <g fill="url(#gDark)" fill-opacity="0.9" filter="url(#soft3)">
+      <g fill="url(#gDark)" fill-opacity="0.9" filter="url(#soft4)">
         <use href="#wsprig"  transform="translate(150,40) rotate(8) scale(0.55)"/>
         <use href="#wsprig"  transform="translate(150,40) rotate(190) scale(0.55)"/>
       </g>
-      <g fill="url(#gBerry)" filter="url(#soft3)">
+      <g fill="url(#gBerry)" filter="url(#soft4)">
         <use href="#berry" transform="translate(96,46) rotate(20) scale(0.7)"/>
         <use href="#berry" transform="translate(196,40) rotate(160) scale(0.7)"/>
       </g>
-      <g filter="url(#soft3)">
+      <g filter="url(#soft4)">
         <use href="#bb" transform="translate(150,24) rotate(0) scale(1.0)"/>
         <use href="#bb" transform="translate(120,34) rotate(-12) scale(0.85)"/>
         <use href="#bb" transform="translate(186,30) rotate(186) scale(0.85)"/>
@@ -1097,6 +1098,20 @@
       <!-- ears -->
       <path d="M52 37 L 50 29 L 57 35 Z"/>
       <path d="M61 37 L 63 29 L 57 35 Z"/>
+    </g>
+
+    <!-- a sitting cat seen FROM BEHIND, tail to the side. viewBox 0 0 64 76 -->
+    <g id="cat2" fill="#8a9775">
+      <!-- two ears poking up (backs of the ears) -->
+      <path d="M24 13 L 19 1 L 31 10 Z"/>
+      <path d="M40 13 L 45 1 L 33 10 Z"/>
+      <!-- rounded back of a seated cat, seen from behind -->
+      <path d="M32 9 C 22 9 16 18 15 30 C 11 39 11 54 13 63 C 14 70 21 73 32 73 C 43 73 50 70 51 63 C 53 54 53 39 49 30 C 48 18 42 9 32 9 Z"/>
+      <!-- back paws peeking out at the base -->
+      <ellipse cx="25" cy="72" rx="5.5" ry="4"/>
+      <ellipse cx="39" cy="72" rx="5.5" ry="4"/>
+      <!-- tail curling out to the side -->
+      <path d="M49 62 C 61 64 63 51 56 46 C 60 53 55 60 48 58 Z"/>
     </g>
 
     <!-- title divider: hairline rules flanking a leaf pair. viewBox 0 0 200 30 -->
@@ -1487,8 +1502,8 @@
     <p class="footer-date">sobota 26. září 2026 &nbsp;·&nbsp; V&nbsp;Mejtě, Praha 10 – Nedvězí</p>
 
     <span class="catmark botanical cat-pair" aria-hidden="true">
-      <svg class="cat-a" viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
-      <svg class="cat-b" viewBox="0 0 72 54" xmlns="http://www.w3.org/2000/svg"><use href="#cat"/></svg>
+      <svg class="cat-a" viewBox="0 0 64 76" xmlns="http://www.w3.org/2000/svg"><use href="#cat2"/></svg>
+      <svg class="cat-b" viewBox="0 0 64 76" xmlns="http://www.w3.org/2000/svg"><use href="#cat2"/></svg>
     </span>
 
     <p class="footer-url">misa-honza.github.io</p>
