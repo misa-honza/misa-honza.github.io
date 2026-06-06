@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Míša &amp; Honza — 26. září 2026</title>
-<meta name="description" content="Svatba Míši Hrdinové a Honzy Janouška — sobota 26. září 2026, V Mejtě, Praha 10 – Nedvězí. Program dne, místo a doprava, ubytování i potvrzení účasti.">
+<meta name="description" content="Svatba Míši Hrdinové a Honzy Janouška — sobota 26. září 2026, V Mejtě, Praha 10 – Nedvězí. Program dne, místo a doprava i potvrzení účasti.">
 <meta name="theme-color" content="#eef3e8">
 
 <!-- Open Graph (nicer link sharing of misa-honza.github.io) -->
@@ -88,8 +88,9 @@
     line-height: 0.95;
   }
 
-  /* the invitation's hue tweak so SVG greenery matches the printed card */
-  .botanical { filter: hue-rotate(8deg) saturate(1.05) brightness(0.85); }
+  /* the invitation's hue tweak so SVG greenery matches the printed card
+     (softened/lightened to match the refined card: lower saturation, higher brightness) */
+  .botanical { filter: hue-rotate(6deg) saturate(0.88) brightness(0.92); }
 
   /* ---------- Layout shell ---------- */
   .wrap {
@@ -124,6 +125,16 @@
     border-radius: 2px;
     pointer-events: none;
     opacity: 0.7;
+  }
+  /* second, ultra-fine inner rule = the card's refined double frame */
+  .panel::after {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    border: 1px solid var(--gold-line);
+    border-radius: 1px;
+    pointer-events: none;
+    opacity: 0.32;
   }
 
   .panel > * { position: relative; z-index: 1; }
@@ -287,6 +298,29 @@
     border-radius: 2px;
     pointer-events: none;
     opacity: 0.8;
+    /* keep the gold rule clear of the corner garlands so it never shows
+       through the greenery — it fades out at all four corners */
+    -webkit-mask-image:
+      radial-gradient(150px 150px at top left,     transparent 58%, #000 100%),
+      radial-gradient(150px 150px at top right,    transparent 58%, #000 100%),
+      radial-gradient(150px 150px at bottom right, transparent 58%, #000 100%),
+      radial-gradient(150px 150px at bottom left,  transparent 58%, #000 100%);
+    -webkit-mask-composite: source-in, source-in, source-in;
+    mask-image:
+      radial-gradient(150px 150px at top left,     transparent 58%, #000 100%),
+      radial-gradient(150px 150px at top right,    transparent 58%, #000 100%),
+      radial-gradient(150px 150px at bottom right, transparent 58%, #000 100%),
+      radial-gradient(150px 150px at bottom left,  transparent 58%, #000 100%);
+    mask-composite: intersect;
+  }
+  /* second, ultra-fine inner rule = the card's refined double frame */
+  .hero-card .frame::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--gold-line);
+    border-radius: 1px;
+    opacity: 0.45;
   }
 
   /* Top eucalyptus garland over the hero, exactly like the card */
@@ -299,6 +333,7 @@
     max-height: 230px;
     pointer-events: none;
     z-index: 0;
+    opacity: 0.8;   /* airier sprigs, matching the refined card */
   }
   /* mirrored sibling so greenery anchors BOTH top corners symmetrically */
   .hero-garland.mirror { transform: scaleX(-1); }
@@ -310,7 +345,7 @@
     bottom: 0;
     transform: scaleY(-1);
     max-height: 170px;
-    opacity: 0.92;
+    opacity: 0.76;
   }
   .hero-garland.bottom.mirror { transform: scale(-1, -1); }
 
@@ -324,7 +359,7 @@
     line-height: 1.5;
     color: var(--accent2);
     max-width: 30em;
-    margin: 0 auto clamp(20px, 4vw, 30px);
+    margin: 0 auto clamp(36px, 6.5vw, 58px);
   }
 
   .hero-names {
@@ -332,7 +367,7 @@
   }
   .hero-names .first {
     font-family: "Allura", "Cormorant Garamond", cursive;
-    font-size: clamp(3.6rem, 16vw, 7rem);
+    font-size: clamp(3rem, 13vw, 5.6rem);
     line-height: 0.9;
     color: var(--ink);
     display: block;
@@ -342,12 +377,13 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin: clamp(2px, 1vw, 8px) 0;
+    margin: clamp(-14px, -1.6vw, -5px) 0;
   }
   .hero-names .ampchar {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.3rem, 4vw, 2rem);
-    color: var(--accent2);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+    color: var(--gold);
   }
   .ampleaf { width: clamp(40px, 9vw, 64px); height: clamp(20px, 4.5vw, 32px); flex: none; }
   .ampleaf.rt { transform: scaleX(-1); }
@@ -359,6 +395,27 @@
     text-transform: uppercase;
     color: var(--accent2);
     margin-top: clamp(14px, 3vw, 22px);
+  }
+
+  /* hairline divider with a centred ornament — the card's .rule */
+  .namerule {
+    width: clamp(150px, 32vw, 230px);
+    height: 0;
+    margin: clamp(18px, 3.4vw, 26px) auto clamp(6px, 1.4vw, 10px);
+    position: relative;
+    border-top: 1px solid var(--rule);
+  }
+  .namerule::after {
+    content: "\2727";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    background: var(--paper);
+    padding: 0 10px;
+    color: var(--gold);
+    font-size: 0.9rem;
+    line-height: 1;
   }
 
   .hero-meta {
@@ -649,7 +706,29 @@
     margin-bottom: 0.5em;
   }
   .rsvp-deadline strong { font-weight: 600; }
-  .rsvp-note { max-width: 32em; margin: 0 auto 1.6em; color: var(--muted); }
+  .rsvp-note { max-width: 32em; margin: 0 auto 1.2em; color: var(--muted); }
+  .rsvp-points {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+  }
+  .rsvp-points li {
+    position: relative;
+    padding-left: 26px;
+    margin: 0 0 0.55em;
+    font-size: clamp(1.05rem, 2.6vw, 1.2rem);
+  }
+  .rsvp-points li:last-child { margin-bottom: 0; }
+  .rsvp-points li::before {
+    content: "\2727";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: var(--gold);
+  }
+  .rsvp-points li strong { color: var(--accent2); font-weight: 600; }
   .contact-row {
     display: flex;
     flex-wrap: wrap;
@@ -1246,7 +1325,6 @@
       <li><a href="#uvod">Úvod</a></li>
       <li><a href="#program">Program</a></li>
       <li><a href="#misto">Místo</a></li>
-      <li><a href="#ubytovani">Ubytování</a></li>
       <li><a href="#rsvp">Potvrzení</a></li>
       <li><a href="#foceni">Focení</a></li>
       <li><a href="#dotazy">Dotazy</a></li>
@@ -1285,20 +1363,15 @@
           <h1 class="hero-names" id="hero-names">
             <span class="first script">Míša</span>
             <span class="amp" aria-hidden="true">
-              <svg class="ampleaf rt botanical" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
-                <g fill="url(#gMid)"><use href="#wsprig" transform="translate(2,15) rotate(-4) scale(0.34)"/></g>
-              </svg>
               <span class="ampchar">&amp;</span>
-              <svg class="ampleaf botanical" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
-                <g fill="url(#gMid)"><use href="#wsprig" transform="translate(2,15) rotate(-4) scale(0.34)"/></g>
-              </svg>
             </span>
             <span class="first script">Honza</span>
           </h1>
-          <p class="hero-surnames">Hrdinová &amp; Janoušek</p>
+
+          <div class="namerule" aria-hidden="true"></div>
 
           <div class="hero-meta">
-            <div class="vow">si řeknou ano</div>
+            <div class="vow">vstoupí do manželství</div>
             <div class="day">v&nbsp;sobotu 26. září 2026</div>
             <div class="time">ve 14:30 hodin</div>
             <div class="venue">V&nbsp;Mejtě</div>
@@ -1336,9 +1409,9 @@
           </span>
         </div>
         <div class="intro-text">
-          <p class="intro-lead">Naši milovaní nejbližší, je to tady&nbsp;– po&nbsp;7&nbsp;letech společného smíchu, malých i&nbsp;velkých dobrodružství a&nbsp;dvou nejmazlivějších kočiček, které nám doma šéfují, jsme se rozhodli udělat to oficiální.</p>
-          <p>Moc bychom si přáli, abyste u&nbsp;toho byli s&nbsp;námi. Připravujeme den plný objetí, smíchu, dobrého jídla, ale hlavně pohody s&nbsp;lidmi, které máme nejraději.</p>
-          <p>Na&nbsp;těchto stránkách najdete vše praktické: program, místo konání, ubytování, dress code, dary a&nbsp;další.</p>
+          <p class="intro-lead">Naši milovaní nejbližší, je to tady! Po&nbsp;7&nbsp;letech společného smíchu, malých i&nbsp;velkých dobrodružství a&nbsp;pod přísným dohledem našich dvou kočičích šéfů jsme se rozhodli to udělat oficiální.</p>
+          <p>Moc bychom si přáli, abyste u&nbsp;toho byli s&nbsp;námi. Připravujeme den plný úsměvů, objetí, dobrého jídla a&nbsp;hlavně pohody s&nbsp;lidmi, které máme nejraději.</p>
+          <p>Na&nbsp;těchto stránkách najdete vše podstatné – kdy a&nbsp;kde to propukne, jak se za&nbsp;námi dopravíte, jak je to s&nbsp;dary a&nbsp;dress codem i&nbsp;přibližný program.</p>
           <p class="intro-sign">Míša &amp;&nbsp;Honza</p>
         </div>
       </div>
@@ -1385,14 +1458,20 @@
           <li class="tl-item tbd">
             <span class="tl-dot" aria-hidden="true"></span>
             <div class="tl-time">čas upřesníme</div>
-            <h3 class="tl-title">Volná zábava a&nbsp;focení novomanželů</h3>
-            <p class="tl-desc">Čas na&nbsp;uvolněné posezení, zatímco si odskočíme pro&nbsp;pár novomanželských fotografií.</p>
+            <h3 class="tl-title">První tanec novomanželů</h3>
+            <p class="tl-desc">Náš první společný tanec jako manželé&nbsp;– a&nbsp;pak už parket patří všem.</p>
           </li>
           <li class="tl-item tbd">
             <span class="tl-dot" aria-hidden="true"></span>
             <div class="tl-time">čas upřesníme</div>
-            <h3 class="tl-title">Večerní raut s&nbsp;grilováním</h3>
-            <p class="tl-desc">Večer u&nbsp;dobrého jídla z&nbsp;grilu, pití a&nbsp;společné zábavy až do&nbsp;noci.</p>
+            <h3 class="tl-title">Focení novomanželů</h3>
+            <p class="tl-desc">Na&nbsp;chvíli si odskočíme pro&nbsp;pár novomanželských fotografií.</p>
+          </li>
+          <li class="tl-item tbd">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-time">čas upřesníme</div>
+            <h3 class="tl-title">Večerní raut s&nbsp;grilováním a&nbsp;volná zábava</h3>
+            <p class="tl-desc">Večer u&nbsp;dobrého jídla z&nbsp;grilu, pití a&nbsp;volné zábavy až do&nbsp;noci.</p>
           </li>
         </ol>
         <p class="lead-center" style="margin-top:30px;margin-bottom:0;">Přesné časy jednotlivých částí dne ještě upřesníme – budeme je tu mít včas, abyste věděli, kdy přijet.</p>
@@ -1457,36 +1536,6 @@
     </div>
   </section>
 
-  <!-- ============================ UBYTOVÁNÍ ============================ -->
-  <section class="section" id="ubytovani" aria-labelledby="ubytovani-title">
-    <div class="wrap">
-      <div class="panel reveal">
-        <div class="section-head">
-          <span class="eyebrow">Pro hosty zdaleka</span>
-          <h2 id="ubytovani-title">Ubytování</h2>
-          <span class="divmark" aria-hidden="true">
-            <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"><use href="#titleDivider"/></svg>
-          </span>
-        </div>
-
-        <p class="lead-center">Doporučení na&nbsp;ubytování v&nbsp;okolí brzy doplníme. Vybíráme pro vás příjemná místa kousek od&nbsp;Nedvězí, ať se po oslavě máte kam pohodlně uložit.</p>
-
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>Ubytování v&nbsp;okolí</h3>
-            <p class="pill-soon">Brzy doplníme</p>
-            <p>Vytipováváme příjemná místa na&nbsp;přespání kousek od&nbsp;Nedvězí. Jakmile budeme mít jistotu, najdete je tady i&nbsp;s&nbsp;orientačními cenami.</p>
-          </div>
-          <div class="info-card">
-            <h3>Praha – pohodlně do&nbsp;centra</h3>
-            <p class="pill-soon">Brzy doplníme</p>
-            <p>Pro ty, kdo chtějí spojit svatbu s&nbsp;výletem do&nbsp;Prahy, přidáme tip na&nbsp;ubytování s&nbsp;dobrým spojením k&nbsp;nám.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============================ POTVRZENÍ ÚČASTI ============================ -->
   <section class="section" id="rsvp" aria-labelledby="rsvp-title">
     <div class="wrap">
@@ -1500,30 +1549,12 @@
         </div>
 
         <div class="rsvp-panel">
-          <p class="rsvp-deadline">Potvrďte prosím svou účast <strong>do&nbsp;31.&nbsp;srpna 2026</strong></p>
-          <p class="rsvp-note">Žádný formulář vyplňovat nemusíte – stačí nám napsat nebo zavolat. Napište nám prosím i&nbsp;to, jestli dorazíte sami nebo s&nbsp;doprovodem, ať pro vás všechno hezky připravíme.</p>
-
-          <div class="contact-row">
-            <a class="contact-card" href="tel:+420XXXXXXXXX">
-              <span class="ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M6.5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-              </span>
-              <span>
-                <span class="ct-label">Telefon</span>
-                <span class="ct-val">+420 XXX XXX XXX</span>
-              </span>
-            </a>
-            <a class="contact-card" href="mailto:ahoj@misa-honza.cz">
-              <span class="ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-              </span>
-              <span>
-                <span class="ct-label">E-mail</span>
-                <span class="ct-val">ahoj@misa-honza.cz</span>
-              </span>
-            </a>
-          </div>
-          <p class="lead-center" style="margin-top:26px;margin-bottom:0;font-style:italic;">Konkrétní telefon a&nbsp;e-mail sem brzy doplníme.</p>
+          <p class="rsvp-note">Nemusíte vyplňovat žádný formulář, stačí nám dát vědět osobně, telefonicky nebo zprávou.</p>
+          <ul class="rsvp-points">
+            <li>Potvrďte prosím svou účast <strong>do&nbsp;31.&nbsp;srpna 2026</strong></li>
+            <li>Dejte nám vědět včas</li>
+            <li>Těšíme se na&nbsp;vás!</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1632,11 +1663,11 @@
           </details>
           <details class="faq-item">
             <summary>
-              <span class="q"><svg class="qleaf botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>Jak vám potvrdíme účast?</span>
+              <span class="q"><svg class="qleaf botanical" viewBox="0 0 30 16" aria-hidden="true"><use href="#leafmark"/></svg>Co se bude pít?</span>
               <span class="chev" aria-hidden="true"></span>
             </summary>
             <div class="faq-body">
-              <p>Úplně jednoduše — zavolejte nebo napište. Vše najdete v&nbsp;sekci <a href="#rsvp">Potvrzení účasti</a>. Prosíme jen, abyste nám dali vědět nejpozději do&nbsp;31.&nbsp;srpna 2026.</p>
+              <p>Po&nbsp;celý den bude k&nbsp;dispozici pivo, víno, bublinky, Aperol a&nbsp;podobně — a&nbsp;samozřejmě i&nbsp;nealko. Tvrdý alkohol u&nbsp;nás ale nehledejte. Sami ho nepijeme a&nbsp;nerozumíme mu, tak ho raději necháme doma&nbsp;:)</p>
             </div>
           </details>
         </div>
